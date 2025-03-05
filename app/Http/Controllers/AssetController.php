@@ -45,7 +45,8 @@ class AssetController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'client_id' => 'required|exists:users,id',
+       //     'client_id' => 'required|exists:users,id',
+            'client_id' => 'required',
             'asset_class_id' => 'required|exists:asset_classes,id',
             'details' => 'required|array',
         ]);
