@@ -72,7 +72,7 @@ export default function Create({ auth, assetClasses }) {
                             <div className="mt-4 flex items-center justify-between">
 
                                 <Link href={route('assets.index')}>
-                                    <PrimaryButton variant="secondary">Back</PrimaryButton>
+                                    <PrimaryButton variant="secondary">Cancel</PrimaryButton>
                                 </Link>
                                 <PrimaryButton
                                     type="button"
