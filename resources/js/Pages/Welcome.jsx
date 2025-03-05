@@ -10,13 +10,9 @@ import {
     Button,
 } from 'react-bootstrap';
 
-/**
- * Página de bienvenida con un nuevo esquema de colores basado en tonos teal,
- * ideal para un fondo blanco y un diseño más moderno.
- */
+
 export default function Welcome({ auth, laravelVersion, phpVersion }) {
     const handleImageError = () => {
-        // Oculta el contenedor de la imagen si falla la carga
         const screenshot = document.getElementById('screenshot-container');
         if (screenshot) screenshot.classList.add('hidden');
     };
@@ -25,7 +21,6 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
         <>
             <Head title="Welcome" />
 
-            {/* Navbar personalizado con colores teal */}
             <Navbar
                 variant="dark"
                 expand="md"
@@ -57,7 +52,6 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
                 </Container>
             </Navbar>
 
-            {/* Sección principal con fondo blanco y acentos teal */}
             <div className="relative bg-white text-teal-900 min-h-screen pt-8">
                 <img
                     id="background"
