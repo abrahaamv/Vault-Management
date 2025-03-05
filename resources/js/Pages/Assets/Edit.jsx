@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Head, useForm } from '@inertiajs/react';
+import { Head, useForm, Link } from '@inertiajs/react';
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout';
 import InputLabel from '@/Components/InputLabel';
 import TextInput from '@/Components/TextInput';
@@ -67,7 +67,10 @@ export default function Edit({ auth, asset, assetClasses }) {
                             <InputError message={errors.client_id} className="mt-2" />
 
                             <div className="mt-4 flex items-center justify-between">
-                                <span />
+
+                                <Link href={route('assets.index')}>
+                                    <PrimaryButton variant="secondary">Cancel</PrimaryButton>
+                                </Link>
                                 <PrimaryButton
                                     type="button"
                                     className="ml-4"
