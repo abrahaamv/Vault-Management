@@ -97,14 +97,14 @@ export default function Index({ auth, assets, flash }) {
             width: '70px',
         },
         {
-            name: 'Client ID',
-            selector: (row) => row.client_id,
+            name: 'Asset Class',
+            selector: (row) => row.asset_class?.name || 'N/A',
             sortable: true,
             wrap: true,
         },
         {
-            name: 'Asset Class',
-            selector: (row) => row.asset_class?.name || 'N/A',
+            name: 'Client ID',
+            selector: (row) => row.client_id,
             sortable: true,
             wrap: true,
         },
@@ -233,6 +233,10 @@ export default function Index({ auth, assets, flash }) {
                     data={filteredAssets}
                     customStyles={customStyles}
                     pagination
+                    fixedHeader
+                    responsive
+                    paginationPerPage={10}
+                    paginationRowsPerPageOptions={[10, 25, 50, 100, 256]}
                     highlightOnHover
                     pointerOnHover
                     expandableRows
