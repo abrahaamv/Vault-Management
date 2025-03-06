@@ -15,14 +15,14 @@ class AssetDetail extends Model
         'details',
     ];
 
-    /**
-     * This cast tells Laravel to automatically store/retrieve
-     * the `details` attribute as JSON. So if we pass an array,
-     * it will store an array in the DB (as valid JSON).
+      /**
+     * This tells Eloquent to automatically encrypt/decrypt
+     * the `details` attribute as an array.
      */
-    protected $casts = [
-        'details' => 'array',
+   protected $casts = [
+        'details' => 'encrypted:array',
     ];
+
 
     public function asset()
     {
