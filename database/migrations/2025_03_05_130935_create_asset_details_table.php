@@ -12,7 +12,7 @@ class CreateAssetDetailsTable extends Migration
             $table->id();
             $table->unsignedBigInteger('asset_id');
             $table->unsignedBigInteger('client_id');
-            $table->json('details')->nullable();
+            $table->text('details')->nullable(); 
             $table->timestamps();
 
             // Example foreign keys (adjust to your needs):
